@@ -55,4 +55,26 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_LONG).show();
         }
     }
+
+    public void viewAllData(View view){
+        Cursor result= databaseHelper.getAllData();
+        StringBuilder message=new StringBuilder();
+        if(result.getCount()==0){
+            Toast.makeText(this,"No Data",Toast.LENGTH_LONG).show();
+        }
+        else{
+            while (result.moveToNext()){
+                message.append("ID : "+result.getString(0)+"\n");
+                message.append("First Name : "+result.getString(1)+"\n");
+                message.append("Surname : "+result.getString(2)+"\n");
+                message.append("Marks : "+result.getString(3)+"\n\n");
+            }
+            AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+            dialog.setTitle("Student Table");
+            dialog.setMessage(message);
+            dialog.setCancelable(true);
+            dialog.show();
+        }
+    }
+
 }
