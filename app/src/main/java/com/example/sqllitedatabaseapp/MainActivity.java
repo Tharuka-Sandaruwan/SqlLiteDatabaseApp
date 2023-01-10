@@ -113,4 +113,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void deleteData(View view){
+        Spinner spinnerId=(Spinner)findViewById(R.id.spinnerId);
+        String id=spinnerId.getSelectedItem().toString();
+        boolean executed= databaseHelper.deleteData(id);
+        if(executed){
+            Toast.makeText(this,"Data Deleted",Toast.LENGTH_LONG).show();
+            viewAllIds();
+            EditText fName=(EditText)findViewById(R.id.editTextFName2);
+            EditText surname=(EditText)findViewById(R.id.editTextSurname2);
+            EditText marks=(EditText)findViewById(R.id.editTextMarks2);
+            fName.setText("");
+            surname.setText("");
+            marks.setText("");
+        }
+        else{
+            Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_LONG).show();
+        }
+    }
+
 }
