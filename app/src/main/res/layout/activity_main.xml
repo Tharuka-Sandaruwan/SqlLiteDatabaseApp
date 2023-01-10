@@ -6,13 +6,124 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="430dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Surname"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="513dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="marks"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="589dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Surname"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="88dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="marks"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="226dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View all Data"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="290dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Get Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        tools:layout_editor_absoluteX="237dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="169dp"
+        android:layout_height="28dp"
+        tools:layout_editor_absoluteX="101dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="380dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
