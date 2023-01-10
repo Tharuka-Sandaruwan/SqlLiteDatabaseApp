@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 
-public class DataHelper extends SQLiteOpenHelper {
+public class databaseHelper extends SQLiteOpenHelper {
 
-    public DataHelper(Context context) {
+    public databaseHelper(Context context) {
         super(context, "Student.db", null, 1);
     }
 
