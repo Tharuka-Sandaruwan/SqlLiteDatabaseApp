@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
         else{
             Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_LONG).show();
         }
+
+        fName.setText("");
+        surname.setText("");
+        marks.setText("");
     }
 
     public void viewAllData(View view){
