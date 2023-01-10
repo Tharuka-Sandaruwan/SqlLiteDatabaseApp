@@ -77,4 +77,40 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void viewDataFromId(View view){
+        Spinner spinnerId=(Spinner)findViewById(R.id.spinnerId);
+        String id=spinnerId.getSelectedItem().toString();
+        Cursor result= databaseHelper.getDataFromID(id);
+        if(result.getCount()==0){
+            Toast.makeText(this,"No Data",Toast.LENGTH_LONG).show();
+        }
+        else{
+            EditText fName=(EditText)findViewById(R.id.editTextFName2);
+            EditText surname=(EditText)findViewById(R.id.editTextSurname2);
+            EditText marks=(EditText)findViewById(R.id.editTextMarks2);
+            while (result.moveToNext()){
+                fName.setText(result.getString(1));
+                surname.setText(result.getString(2));
+                marks.setText(""+Integer.parseInt(result.getString(3)));
+            }
+        }
+    }
+
+    public void updateData(View view){
+        Spinner spinnerId=(Spinner)findViewById(R.id.spinnerId);
+        String id=spinnerId.getSelectedItem().toString();
+        if(!id.equals("Select ID")){
+            EditText fName=(EditText)findViewById(R.id.editTextFName2);
+            EditText surname=(EditText)findViewById(R.id.editTextSurname2);
+            EditText marks=(EditText)findViewById(R.id.editTextMarks2);
+            boolean executed= databaseHelper.updateData(id,fName.getText().toString(),surname.getText().toString(),Integer.parseInt(marks.getText().toString()));
+            if(executed){
+                Toast.makeText(this,"Data Updated",Toast.LENGTH_LONG).show();
+            }
+            else{
+                Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
 }
